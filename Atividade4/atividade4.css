@@ -1,0 +1,132 @@
+body{
+    background-color: antiquewhite;
+}
+h1{
+    color:white;
+    font-size: 48;
+    font-family: 'Times New Roman';
+
+}
+p{
+    color: ghostwhite;
+    font-size: 32px;
+    font-family: Times;
+}
+
+.Header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(146, 73, 87);
+    display: flex;
+    padding: 15px 20px;
+    color: white;
+    box-shadow: 2px 2px 20px rgb(59, 31, 31);
+}
+.container-box{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: auto;
+    grid-template-rows: 150px 200px 200px;
+    grid-template-areas: 
+    'a e c d'
+    'a e c d'
+    'a f f f';
+    padding-top: 50px;
+    text-align: left;
+    
+}
+
+.box {
+    background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    border-radius: 5px;
+    font-size: large;
+    box-shadow:5px, 5px, 5px rgb(59, 31, 31);
+
+}
+
+
+.a{
+        grid-area: a;
+    text-align: left;
+    padding-left: 5%;
+    
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0)),
+        url(https://tse4.mm.bing.net/th/id/OIP.W89q1orDBLCLg3ifUN1qLgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: normal;
+}
+
+.b{
+    grid-area: b;
+    text-align: left;
+    padding-left: 5%;
+    
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0)),
+        url(https://tse4.mm.bing.net/th/id/OIP.W89q1orDBLCLg3ifUN1qLgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: normal;
+}
+
+.c{
+        grid-area:c;
+    text-align: left;
+    padding-left: 5%;
+    
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0)),
+        url(https://tse4.mm.bing.net/th/id/OIP.W89q1orDBLCLg3ifUN1qLgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: normal;
+}
+
+.d{
+      grid-area: d;
+    text-align: left;
+    padding-left: 5%;
+    
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0)),
+        url(https://tse4.mm.bing.net/th/id/OIP.W89q1orDBLCLg3ifUN1qLgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: normal;
+}
+
+.e{
+        grid-area: e;
+    text-align: left;
+    padding-left: 5%;
+    
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0)),
+        url(https://tse4.mm.bing.net/th/id/OIP.W89q1orDBLCLg3ifUN1qLgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: normal;
+}
+
+.f{
+       grid-area: f;
+    text-align: left;
+    padding-left: 5%;
+    
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0)),
+        url(./Sem\ título.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: normal;
+    background-position: center;
+}
