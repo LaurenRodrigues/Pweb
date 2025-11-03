@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: bisque;
+            color: darkcyan;
+            font-size: larger;
+        }
+
+        button
+        {
+            font-size: large;
+            margin-left: 30px;
+            margin-top: 150px;
+            block-size: 100px;
+            background-color: darkcyan;
+            color: bisque;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+
+        // Exercício 1
+
+        function AreaRetangulo1(x, y) {
+            this._base = x;
+            this._altura = y;
+
+            this.CalcularArea = function(){
+                return this._base * this._altura;
+            }
+        }
+
+        function calcular() {
+            let base = parseFloat(prompt("Digite a base do retângulo:"));
+            let altura = parseFloat(prompt("Digite a altura do retângulo:"));
+
+            let ret = new AreaRetangulo1(base, altura);
+            alert("A área do retângulo é: " + ret.CalcularArea());
+        }
+
+        // Exercício 2
+
+        class Conta {
+            constructor(){
+                this._nomeCorrentista;
+                this._banco;
+                this._numeroConta;
+                this._saldo;
+            }
+
+            setNomeCorrentista(value){
+                this._nomeCorrentista = value;
+            }
+
+            setBanco(value){
+                this._banco = value;
+            }
+
+            setNumeroConta(value){
+                this._numeroConta = value;
+            }
+
+            setSaldo(value){
+                this._saldo = value;
+            }
+
+            getNomeCorrentista(){
+                return this._nomeCorrentista;
+            }
+
+            getBanco(){
+                return this._banco;
+            }
+
+            getNumeroConta(){
+                return this._numeroConta;
+            }
+
+            getSaldo(){
+                return this._saldo;
+            }
+        }
+
+        class Corrente extends Conta {
+            constructor(){
+                super();
+                this._saldoEspecial;
+            }
+
+            setSaldoEspecial(value){
+                this._saldoEspecial = value;
+            }
+
+            getSaldoEspecial(){
+                return this._saldoEspecial
+            }
+        }
+
+        class Poupanca extends Conta {
+            constructor(){
+                super();
+                this._juros;
+                this._dataVencimento;
+            }
+
+            setJuros(value){
+                this._juros = value;
+            }
+
+            setDataVencimento(value){
+                this._dataVencimento = value;
+            }
+
+            getJuros(){
+                return this._juros;
+            }
+
+            getDataVencimento(){
+                return this._dataVencimento;
+            }
+        }
+
+        function criarContaCorrente() {
+            let conta = new Corrente();
+            conta.setNomeCorrentista(prompt("Nome do correntista:"));
+            conta.setBanco(prompt("Banco:"));
+            conta.setNumeroConta(prompt("Número da conta:"));
+            conta.setSaldo(parseFloat(prompt("Saldo:")));
+            conta.setSaldoEspecial(parseFloat(prompt("Saldo especial:")));
+
+            alert(
+                "Conta Corrente criada!\n" +
+                "Associado:: " + conta.getNomeCorrentista() + "\n" +
+                "Conta: " + conta.getNumeroConta() + "\n" +
+                "Banco: " + conta.getBanco() + "\n" +
+                "Saldo: R$ " + conta.getSaldo() + "\n" +
+                "Saldo Especial: R$ " + conta.getSaldoEspecial()
+            );
+        }
+
+         function criarContaPoupanca() {
+            let conta = new Poupanca();
+            conta.setNomeCorrentista(prompt("Nome do associado:"));
+            conta.setBanco(prompt("Banco:"));
+            conta.setNumeroConta(prompt("Número da conta:"));
+            conta.setSaldo(parseFloat(prompt("Saldo:")));
+            conta.setJuros(parseFloat(prompt("Juros:")));
+            conta.setDataVencimento(prompt("Vencimento (DD/mm/YYYY):"))
+
+            alert(
+                "Conta Poupança criada!\n" +
+                "Associado: " + conta.getNomeCorrentista() + "\n" +
+                "Banco: " + conta.getBanco() + "\n" +
+                "Conta: " + conta.getNumeroConta() + "\n" +
+                "Saldo: R$ " + conta.getSaldo() + "\n" +
+                "Juros: " + conta.getJuros() + " % " + "\n" +
+                "Vencimento: " + conta.getDataVencimento() + "\n"
+            );
+        }
+    </script>
+</head>
+<body>
+    <h2>Simulador de Contas</h2>
+    <button onclick="calcular()">Calcular Área do Retângulo</button>
+    <button onclick="criarContaCorrente()">Criar Conta Corrente</button>
+    <button onclick="criarContaPoupanca()">Criar Conta Poupança</button>
+</body>
+</html>
