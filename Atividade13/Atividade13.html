@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abra a Janela!</title>
+    <style>
+        body {
+            text-align: center;
+            
+        }
+    </style>
+    <script>
+        function abrirJanela(){
+            document.getElementById("janela").src = "imgs/janela_aberta.png";
+            document.getElementById("estado").textContent = "Janela Aberta";
+        }
+
+        function fecharJanela(){
+            document.getElementById("janela").src = "imgs/janela_fechada.png";
+            document.getElementById("estado").textContent = "Janela Fechada";
+        }
+
+        function quebrarJanela(){
+            document.getElementById("janela").src = "imgs/janela_quebrada.png";
+            document.getElementById("estado").textContent = "Janela Quebrada";
+        }
+    </script>
+</head>
+<body onload="abrirJanela()">
+    <h1 id="estado">Janela Aberta</h1>
+
+    <img
+        id="janela"
+        src=""
+        width="300"
+        alt="Estado da Janela"
+        onmouseover="fecharJanela()"
+        onclick="quebrarJanela()"
+        onmouseout="abrirJanela()"
+    >
+</body>
+</html>
