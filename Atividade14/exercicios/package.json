@@ -9,7 +9,8 @@
   "version": "1.0.0",
   "main": "callback1.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon app.js"
   },
   "author": "",
   "license": "ISC",
